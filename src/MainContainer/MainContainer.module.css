@@ -1,0 +1,15 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10rem auto;
+  width: 75%;
+  background-color: yellowgreen;
+  padding: 2rem;
+}
+
+.mainContainer h3,
+.mainContainer h3 span {
+  font-size: 2.5rem;
+  font-style: italic;
+}

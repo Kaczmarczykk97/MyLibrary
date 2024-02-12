@@ -1,0 +1,10 @@
+.mainPage {
+  background: url(../imgs/background_main.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 200vh;
+  overflow-x: hidden;
+}
