@@ -34,7 +34,7 @@ header .textContainer h2 {
   margin-bottom: 2rem;
 }
 
-button {
+.header-btn {
   appearance: none;
   background: transparent;
   border: 0;
@@ -49,15 +49,15 @@ button {
   box-shadow: 0 0 3rem #fff;
 }
 
-button:hover {
+.header-btn:hover {
   filter: brightness(1.1);
 }
 
-button:active {
+.header-btn:active {
   filter: brightness(0.9);
 }
 
-button > span {
+.header-btn > span {
   display: block;
   position: relative;
   transition: transform var(--motion-duration) var(--motion-ease);
@@ -65,15 +65,15 @@ button > span {
   font-size: 3.5rem;
 }
 
-button:hover > span {
+.header-btn:hover > span {
   transform: scale(1.05);
 }
 
-button:active > span {
+.header-btn:active > span {
   transform: scale(0.95);
 }
 
-button > svg {
+.header-btn > svg {
   fill: #685044;
   position: absolute;
   top: -5%;
@@ -82,17 +82,17 @@ button > svg {
   height: 110%;
 }
 
-button > svg > path {
+.header-btn > svg > path {
   transition: var(--motion-duration) var(--motion-ease);
 }
 
-button:hover > svg > path {
+.header-btn:hover > svg > path {
   d: path(
     "M0,0 C0,-5 100,-5 100,0 C105,0 105,100 100,100 C100,105 0,105 0,100 C-5,100 -5,0 0,0"
   );
 }
 
-button:active > svg > path {
+.header-btn:active > svg > path {
   d: path(
     "M0,0 C30,10 70,10 100,0 C95,30 95,70 100,100 C70,90 30,90 0,100 C5,70 5,30 0,0"
   );

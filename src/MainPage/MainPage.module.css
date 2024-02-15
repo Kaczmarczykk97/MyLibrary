@@ -1,5 +1,6 @@
 .mainPage {
-  background: url(../imgs/background_main.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url(../imgs/background_main.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

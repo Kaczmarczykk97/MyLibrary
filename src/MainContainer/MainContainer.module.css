@@ -2,14 +2,41 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
   margin: 10rem auto;
   width: 75%;
-  background-color: yellowgreen;
-  padding: 2rem;
+  padding: 2rem 4rem;
 }
 
 .mainContainer h3,
 .mainContainer h3 span {
   font-size: 2.5rem;
   font-style: italic;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #dbdde5;
+  width: 100%;
+  padding: 2rem;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 2.25rem;
+  width: max-content;
+  min-width: 90%;
+}
+
+.searchBar input {
+  padding: 0.5rem 2rem;
+  width: 100%;
+}
+
+.searchBar .icon {
+  font-size: 2rem;
 }

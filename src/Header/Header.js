@@ -6,7 +6,7 @@ function Header() {
       <div className={classes["textContainer"]}>
         <h1>My Library Online</h1>
         <h2>Create Your Own Bookshelf</h2>
-        <button>
+        <button className={classes["header-btn"]}>
           <span>Start</span>
           <svg
             viewBox="-5 -5 110 110"
