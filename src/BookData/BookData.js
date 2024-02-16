@@ -4,7 +4,7 @@ import classes from "./BookData.module.css";
 
 import example_cover from "../imgs/example_cover.jpg";
 
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaEdit } from "react-icons/fa";
 
 function BookData() {
   const [hashtags, setHashtags] = useState("");
@@ -32,7 +32,8 @@ function BookData() {
   }
 
   function setBooksDataHandler(e) {
-    const inputID = e.target.parentNode.getAttribute("data-set");
+    const inputID = e.target.closest("div").parentNode.getAttribute("data-set");
+
     if (inputID === "hashtags") {
       const inputElement = e.target.parentNode.querySelector("input");
       setHashtags(inputElement.value);
@@ -46,7 +47,6 @@ function BookData() {
       setPagesAmount(inputElement.value);
     }
     if (inputID === "dataAdding") {
-      console.log("Działa?");
       const inputElement = e.target.parentNode.querySelector("input");
       setDataAdding(inputElement.value);
     }
@@ -57,6 +57,28 @@ function BookData() {
     if (inputID === "endReadingData") {
       const inputElement = e.target.parentNode.querySelector("input");
       setEndReadingData(inputElement.value);
+    }
+  }
+
+  function setEditBooksData(e) {
+    const editID = e.target.getAttribute("data-bookDataEditId");
+    if (editID === "hashtags") {
+      setHashtags("");
+    }
+    if (editID === "author") {
+      setAuthor("");
+    }
+    if (editID === "pagesAmount") {
+      setPagesAmount("");
+    }
+    if (editID === "dataAdding") {
+      setDataAdding("");
+    }
+    if (editID === "startReadingData") {
+      setStartReadingData("");
+    }
+    if (editID === "endReadingData") {
+      setEndReadingData("");
     }
   }
 
@@ -89,6 +111,13 @@ function BookData() {
                 Add
               </button>
             )}
+            {hashtags && (
+              <FaEdit
+                className={classes["icon-edit"]}
+                onClick={setEditBooksData}
+                data-bookDataEditId="hashtags"
+              />
+            )}
           </div>
         </div>
         <div className={classes["input-container"]} data-set="author">
@@ -103,6 +132,13 @@ function BookData() {
               >
                 Add
               </button>
+            )}
+            {author && (
+              <FaEdit
+                className={classes["icon-edit"]}
+                onClick={setEditBooksData}
+                data-bookDataEditId="author"
+              />
             )}
           </div>
         </div>
@@ -119,6 +155,13 @@ function BookData() {
                 Add
               </button>
             )}
+            {pagesAmount && (
+              <FaEdit
+                className={classes["icon-edit"]}
+                onClick={setEditBooksData}
+                data-bookDataEditId="pagesAmount"
+              />
+            )}
           </div>
         </div>
         <div className={classes["input-container"]} data-set="dataAdding">
@@ -133,6 +176,13 @@ function BookData() {
               >
                 Add
               </button>
+            )}
+            {dataAdding && (
+              <FaEdit
+                className={classes["icon-edit"]}
+                onClick={setEditBooksData}
+                data-bookDataEditId="dataAdding"
+              />
             )}
           </div>
         </div>
@@ -149,6 +199,13 @@ function BookData() {
                 Add
               </button>
             )}
+            {startReadingData && (
+              <FaEdit
+                className={classes["icon-edit"]}
+                onClick={setEditBooksData}
+                data-bookDataEditId="startReadingData"
+              />
+            )}
           </div>
         </div>
         <div className={classes["input-container"]} data-set="endReadingData">
@@ -163,6 +220,13 @@ function BookData() {
               >
                 Add
               </button>
+            )}
+            {endReadingData && (
+              <FaEdit
+                className={classes["icon-edit"]}
+                onClick={setEditBooksData}
+                data-bookDataEditId="endReadingData"
+              />
             )}
           </div>
         </div>
